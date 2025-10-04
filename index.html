@@ -1,0 +1,1358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leo's Lawn Care | Professional Tree Care & Landscaping | Lansing, IL</title>
+    <meta name="description" content="Expert tree service and landscaping in Lansing, Illinois. Tree Services, trimming, stump grinding, and complete landscaping solutions. Licensed & insured.">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            overflow-x: hidden;
+        }
+
+        /* Header */
+        .header {
+            background: linear-gradient(135deg, #2c5530 0%, #4a7c59 100%);
+            color: white;
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo::before {
+            content: "";
+            display: inline-block;
+            width: 32px;   /* adjust as needed */
+            height: 32px;
+            background: url("your_image.png") no-repeat center center;
+            background-size: contain;
+        }
+
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-menu a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            padding: 0.5rem 1rem;
+            border-radius: 25px;
+        }
+
+        .nav-menu a:hover {
+            background: rgba(255,255,255,0.2);
+            transform: translateY(-2px);
+        }
+
+        .cta-button {
+            background: linear-gradient(45deg, #ff6b35, #f7931e);
+            color: white !important;
+            padding: 0.8rem 1.5rem;
+            border-radius: 30px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            box-shadow: 0 4px 15px rgba(255, 107, 53, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(255, 107, 53, 0.4);
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), 
+                        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800"><rect fill="%234a7c59" width="1200" height="800"/><path fill="%2339b54a" d="M0 400c150-50 300-100 450-75s300 100 450 50s300-25 300 25v400H0z"/><circle fill="%232c5530" cx="200" cy="150" r="80"/><circle fill="%232c5530" cx="800" cy="200" r="100"/><circle fill="%232c5530" cx="1000" cy="100" r="60"/></svg>') center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, rgba(76, 175, 80, 0.1), rgba(139, 195, 74, 0.1));
+            animation: shimmer 3s ease-in-out infinite alternate;
+        }
+
+        @keyframes shimmer {
+            0% { opacity: 0.5; }
+            100% { opacity: 0.8; }
+        }
+
+        .hero-content {
+            max-width: 800px;
+            z-index: 2;
+            position: relative;
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            animation: fadeInUp 1s ease-out;
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+            animation: fadeInUp 1s ease-out 0.3s both;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            animation: fadeInUp 1s ease-out 0.6s both;
+        }
+
+        .btn {
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 30px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .btn-primary {
+            background: linear-gradient(45deg, #ff6b35, #f7931e);
+            color: white;
+            box-shadow: 0 6px 20px rgba(255, 107, 53, 0.3);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Services Section */
+        .services {
+            padding: 5rem 0;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: #2c5530;
+            font-weight: 700;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            font-size: 1.2rem;
+            color: #666;
+            margin-bottom: 3rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .service-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(90deg, #4CAF50, #8BC34A);
+            transition: left 0.5s ease;
+        }
+
+        .service-card:hover::before {
+            left: 0;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+
+        .service-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .service-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: #2c5530;
+        }
+
+        /* Booking Section */
+        .booking {
+            padding: 5rem 0;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+        }
+
+        .booking-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .booking-form {
+            background: white;
+            padding: 3rem;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+
+        .booking-steps {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 3rem;
+            position: relative;
+        }
+
+        .booking-steps::before {
+            content: '';
+            position: absolute;
+            top: 20px;
+            left: 10%;
+            right: 10%;
+            height: 2px;
+            background: #e0e0e0;
+            z-index: 1;
+        }
+
+        .booking-step {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+            z-index: 2;
+        }
+
+        .step-number {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: #e0e0e0;
+            color: #666;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .step-number.active {
+            background: #4CAF50;
+            color: white;
+        }
+
+        .step-number.completed {
+            background: #2c5530;
+            color: white;
+        }
+
+        .step-title {
+            font-size: 0.9rem;
+            color: #666;
+            text-align: center;
+        }
+
+        .booking-content {
+            min-height: 400px;
+        }
+
+        .step-content {
+            display: none;
+        }
+
+        .step-content.active {
+            display: block;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .service-options {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .service-option {
+            border: 2px solid #e0e0e0;
+            border-radius: 15px;
+            padding: 1.5rem;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            background: white;
+        }
+
+        .service-option:hover {
+            border-color: #4CAF50;
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+
+        .service-option.selected {
+            border-color: #4CAF50;
+            background: #f8fff8;
+        }
+
+        .service-option input[type="radio"] {
+            display: none;
+        }
+
+        .service-option .service-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .service-option h4 {
+            color: #2c5530;
+            margin-bottom: 0.5rem;
+        }
+
+        .service-option p {
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        .date-time-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .time-slots {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+
+        .time-slot {
+            padding: 0.8rem;
+            border: 2px solid #e0e0e0;
+            border-radius: 10px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            background: white;
+        }
+
+        .time-slot:hover {
+            border-color: #4CAF50;
+        }
+
+        .time-slot.selected {
+            border-color: #4CAF50;
+            background: #4CAF50;
+            color: white;
+        }
+
+        .time-slot.unavailable {
+            background: #f5f5f5;
+            color: #999;
+            cursor: not-allowed;
+        }
+
+        .booking-summary {
+            background: #f8fff8;
+            padding: 2rem;
+            border-radius: 15px;
+            border: 1px solid #4CAF50;
+        }
+
+        .summary-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 1rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .summary-item:last-child {
+            border-bottom: none;
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+
+        .booking-navigation {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid #e0e0e0;
+        }
+
+        .btn-back {
+            background: #6c757d;
+            color: white;
+        }
+
+        .btn-next {
+            background: #4CAF50;
+            color: white;
+            margin-left: auto;
+        }
+
+        .confirmation-message {
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .confirmation-icon {
+            font-size: 4rem;
+            color: #4CAF50;
+            margin-bottom: 1rem;
+        }
+
+        @media (max-width: 768px) {
+            .form-row,
+            .date-time-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .booking-steps {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .booking-steps::before {
+                display: none;
+            }
+
+            .time-slots {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .service-options {
+                grid-template-columns: 1fr;
+            }
+        }
+        /* About Section */
+        .about {
+            padding: 5rem 0;
+            background: white;
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .about-text h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: #2c5530;
+        }
+
+        .about-text p {
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+            color: #666;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .feature {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem;
+        }
+
+        .feature::before {
+            content: "✓";
+            color: #4CAF50;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .about-image {
+            background: linear-gradient(135deg, #4CAF50, #8BC34A);
+            border-radius: 20px;
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 8rem;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 5rem 0;
+            background: linear-gradient(135deg, #2c5530 0%, #4a7c59 100%);
+            color: white;
+        }
+
+        .contact-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+        }
+
+        .contact-info h2 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-item::before {
+            content: attr(data-icon);
+            font-size: 1.5rem;
+            width: 40px;
+            text-align: center;
+        }
+
+        .contact-form {
+            background: rgba(255,255,255,0.1);
+            padding: 2rem;
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.8rem;
+            border: none;
+            border-radius: 10px;
+            background: rgba(255,255,255,0.9);
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.3);
+            transform: translateY(-2px);
+        }
+
+        /* Footer */
+        .footer {
+            background: #1a1a1a;
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+        }
+
+        .footer p {
+            margin-bottom: 1rem;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+        }
+
+        .social-links a {
+            color: white;
+            font-size: 1.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .social-links a:hover {
+            color: #4CAF50;
+            transform: translateY(-3px);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-menu {
+                display: none;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .about-content,
+            .contact-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .features {
+                grid-template-columns: 1fr;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Scroll animations */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="nav-container">
+            <div class="logo">Leo's Lawn Care</div>
+            <nav class="nav-menu">
+                <a href="#home">Home</a>
+                <a href="#services">Services</a>
+                <a href="#booking">Book Now</a>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
+                <a href="#booking" class="cta-button">Book Online</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Professional Tree Care & Landscaping</h1>
+            <p>Serving Lansing, IL and surrounding areas with expert tree services, landscaping, and outdoor solutions for over 15 years.</p>
+            <div class="hero-buttons">
+                <a href="#booking" class="btn btn-primary">Book Appointment</a>
+                <a href="tel:(630) XXX-XXXX" class="btn btn-secondary">Call (630) XXX-XXXX</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <h2 class="section-title fade-in">Our Services</h2>
+            <p class="section-subtitle fade-in">Complete tree care and landscaping solutions for residential and commercial properties</p>
+            
+            <div class="services-grid">
+                <div class="service-card fade-in">
+                    <span class="service-icon">🌲</span>
+                    <h3>Tree Services</h3>
+                    <p>Trimming, pruning, removal, and stump grinding to keep your trees healthy, safe, and beautiful.</p>
+                </div>
+                
+                <div class="service-card fade-in">
+                    <span class="service-icon">🍂</span>
+                    <h3>Tree Trimming & Pruning</h3>
+                    <p>Spring planting, summer lawn care, fall cleanup, and winter snow plowing—year-round landscape care.</p>
+                </div>
+                
+                <div class="service-card fade-in">
+                    <span class="service-icon">🪓</span>
+                    <h3>Land Clearing</h3>
+                    <p>Clearing trees, brush, and debris to transform overgrown areas into usable spaces.</p>
+                </div>
+                
+                <div class="service-card fade-in">
+                    <span class="service-icon">🌱</span>
+                    <h3>Lawn Care & Maintenance</h3>
+                    <p>Mowing, fertilization, weed control, and aeration tailored to your lawn’s needs.</p>
+                </div>
+                
+                <div class="service-card fade-in">
+                    <span class="service-icon">🪵</span>
+                    <h3>Mulch Delivery & Installation</h3>
+                    <p>Convenient, reliable mulch delivery and professional installation for a polished landscape.</p>
+                </div>
+                
+                <div class="service-card fade-in">
+                    <span class="service-icon">⚡</span>
+                    <h3>Emergency Removals</h3>
+                    <p>Fast, safe removal of fallen or damaged trees and limbs to protect your property.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Section -->
+    <section id="booking" class="booking">
+        <div class="booking-container">
+            <h2 class="section-title fade-in">Book Your Service Online</h2>
+            <p class="section-subtitle fade-in">Schedule your tree service or landscaping appointment in just a few easy steps</p>
+            
+            <div class="booking-form fade-in">
+                <div class="booking-steps">
+                    <div class="booking-step">
+                        <div class="step-number active" id="step1-indicator">1</div>
+                        <div class="step-title">Select Service</div>
+                    </div>
+                    <div class="booking-step">
+                        <div class="step-number" id="step2-indicator">2</div>
+                        <div class="step-title">Choose Date & Time</div>
+                    </div>
+                    <div class="booking-step">
+                        <div class="step-number" id="step3-indicator">3</div>
+                        <div class="step-title">Your Information</div>
+                    </div>
+                    <div class="booking-step">
+                        <div class="step-number" id="step4-indicator">4</div>
+                        <div class="step-title">Confirmation</div>
+                    </div>
+                </div>
+
+                <div class="booking-content">
+                    <!-- Step 1: Service Selection -->
+                    <div class="step-content active" id="step1">
+                        <h3 style="margin-bottom: 2rem;">What service do you need?</h3>
+                        <div class="service-options">
+
+                            <label class="service-option">
+                                <input type="radio" name="service" value="tree-services" data-price="Free Estimate!!">
+                                <div class="service-icon">🌲</div>
+                                <h4>Tree Services</h4>
+                                <p>Complete care including trimming, removal, and stump work.</p>
+                                <div style="color: #4CAF50; font-weight: bold; margin-top: 0.5rem;">Free Consultation</div>
+                            </label>
+
+                            <label class="service-option">
+                                <input type="radio" name="service" value="tree-trimming" data-price="Free Estimate!!">
+                                <div class="service-icon">🍂</div>
+                                <h4>Tree Trimming & Pruning</h4>
+                                <p>Shaping and cutting to keep trees safe and healthy.</p>
+                                <div style="color: #4CAF50; font-weight: bold; margin-top: 0.5rem;">Free Consultation</div>
+                            </label>
+
+                            <label class="service-option">
+                                <input type="radio" name="service" value="land-clearing" data-price="Free Estimate!!">
+                                <div class="service-icon">🪓</div>
+                                <h4>Land Clearing</h4>
+                                <p>Remove trees, brush, and debris for a clean open space.</p>
+                                <div style="color: #4CAF50; font-weight: bold; margin-top: 0.5rem;">Free Consultation</div>
+                            </label>
+
+                            <label class="service-option">
+                                <input type="radio" name="service" value="lawn-care" data-price="Free Estimate!!">
+                                <div class="service-icon">🌱</div>
+                                <h4>Lawn Care & Maintenance</h4>
+                                <p>Regular mowing, fertilization, and weed control for your yard.</p>
+                                <div style="color: #4CAF50; font-weight: bold; margin-top: 0.5rem;">Free Consultation</div>
+                            </label>
+
+                            <label class="service-option">
+                                <input type="radio" name="service" value="mulch" data-price="Free Estimate!!">
+                                <div class="service-icon">🪵</div>
+                                <h4>Mulch Delivery & Installation</h4>
+                                <p>Fresh mulch delivered and installed for a polished look.</p>
+                                <div style="color: #4CAF50; font-weight: bold; margin-top: 0.5rem;">Free Consultation</div>
+                            </label>
+
+                            <label class="service-option">
+                                <input type="radio" name="service" value="emergency" data-price="Free Estimate!!">
+                                <div class="service-icon">⚡</div>
+                                <h4>Emergency Removals</h4>
+                                <p>Quick response to safely remove fallen or dangerous trees.</p>
+                                <div style="color: #4CAF50; font-weight: bold; margin-top: 0.5rem;">Free Consultation</div>
+                            </label>
+
+                        </div>
+                    </div>
+
+                    <!-- Step 2: Date & Time Selection -->
+                    <div class="step-content" id="step2">
+                        <h3 style="margin-bottom: 2rem;">When would you like us to come?</h3>
+                        <div class="date-time-grid">
+                            <div>
+                                <label for="booking-date">Select Date:</label>
+                                <input type="date" id="booking-date" name="date" style="width: 100%; padding: 0.8rem; border: 2px solid #e0e0e0; border-radius: 10px; font-size: 1rem; margin-top: 0.5rem;">
+                            </div>
+                            <div>
+                                <label>Preferred Time:</label>
+                                <div class="time-slots">
+                                    <div class="time-slot" data-time="8:00 AM">8:00 AM</div>
+                                    <div class="time-slot" data-time="10:00 AM">10:00 AM</div>
+                                    <div class="time-slot" data-time="12:00 PM">12:00 PM</div>
+                                    <div class="time-slot" data-time="2:00 PM">2:00 PM</div>
+                                    <div class="time-slot" data-time="4:00 PM">4:00 PM</div>
+                                    <div class="time-slot unavailable" data-time="6:00 PM">6:00 PM</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="special-requests">Special Requests or Notes:</label>
+                            <textarea id="special-requests" name="notes" rows="3" placeholder="Any specific requirements or concerns we should know about?"></textarea>
+                        </div>
+                    </div>
+
+                    <!-- Step 3: Customer Information -->
+                    <div class="step-content" id="step3">
+                        <h3 style="margin-bottom: 2rem;">Your Contact Information</h3>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="customer-name">Full Name *</label>
+                                <input type="text" id="customer-name" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="customer-phone">Phone Number *</label>
+                                <input type="tel" id="customer-phone" name="phone" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="customer-email">Email Address *</label>
+                            <input type="email" id="customer-email" name="email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="service-address">Service Address *</label>
+                            <textarea id="service-address" name="address" rows="2" placeholder="Full address where service will be performed" required></textarea>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="property-type">Property Type</label>
+                                <select id="property-type" name="property-type">
+                                    <option>Residential</option>
+                                    <option>Commercial</option>
+                                    <option>Municipal</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="emergency-level">Service Priority</label>
+                                <select id="emergency-level" name="priority">
+                                    <option>Regular Service</option>
+                                    <option>Urgent (Within 2 days)</option>
+                                    <option>Emergency (Same day)</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Step 4: Confirmation -->
+                    <div class="step-content" id="step4">
+                        <div class="confirmation-message" style="display: none;" id="confirmation-success">
+                            <div class="confirmation-icon">✅</div>
+                            <h3>Booking Confirmed!</h3>
+                            <p>Thank you for choosing Leo's Lawn Care. We've sent you a confirmation email with all the details.</p>
+                            <p><strong>Reference Number:</strong> <span id="booking-reference"></span></p>
+                            <p style="margin-top: 2rem;">We'll call you within 2 hours to confirm the appointment and discuss any specific requirements.</p>
+                        </div>
+                        
+                        <div id="booking-review">
+                            <h3 style="margin-bottom: 2rem;">Review Your Booking</h3>
+                            <div class="booking-summary">
+                                <div class="summary-item">
+                                    <span>Service:</span>
+                                    <span id="summary-service">-</span>
+                                </div>
+                                <div class="summary-item">
+                                    <span>Date:</span>
+                                    <span id="summary-date">-</span>
+                                </div>
+                                <div class="summary-item">
+                                    <span>Time:</span>
+                                    <span id="summary-time">-</span>
+                                </div>
+                                <div class="summary-item">
+                                    <span>Customer:</span>
+                                    <span id="summary-customer">-</span>
+                                </div>
+                                <div class="summary-item">
+                                    <span>Phone:</span>
+                                    <span id="summary-phone">-</span>
+                                </div>
+                                <div class="summary-item">
+                                    <span>Address:</span>
+                                    <span id="summary-address">-</span>
+                                </div>
+                                <div class="summary-item">
+                                    <span>Estimated Cost:</span>
+                                    <span id="summary-cost">-</span>
+                                </div>
+                            </div>
+                            
+                            <div style="margin-top: 2rem; padding: 1rem; background: #fff3cd; border-radius: 10px; border-left: 4px solid #ffc107;">
+                                <h4 style="color: #856404; margin-bottom: 0.5rem;">Important Notes:</h4>
+                                <ul style="color: #856404; margin-left: 1rem;">
+                                    <li>Final pricing will be determined after on-site assessment</li>
+                                    <li>We'll call to confirm your appointment within 2 hours</li>
+                                    <li>Free estimates for all services</li>
+                                    <li>Payment due upon completion of work</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="booking-navigation">
+                    <button type="button" class="btn btn-back" id="btn-back" style="display: none;">← Back</button>
+                    <button type="button" class="btn btn-next" id="btn-next">Next →</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text fade-in">
+                    <h2>Why Choose Leo's Lawn Care?</h2>
+                    <p>With over 15 years of experience serving Lansing and the surrounding Illinois communities, we're your trusted local experts for all tree care and landscaping needs.</p>
+                    <p>Our certified arborists and landscape professionals are committed to enhancing the beauty, safety, and value of your property while protecting the environment.</p>
+                    
+                    <div class="features">
+                        <div class="feature">Licensed & Insured</div>
+                        <div class="feature">Free Estimates</div>
+                        <div class="feature">Emergency Removals</div>
+                        <div class="feature">Certified Arborists</div>
+                        <div class="feature">Local Family Business</div>
+                        <div class="feature">Eco-Friendly Practices</div>
+                    </div>
+                    
+                    <a href="#booking" class="btn btn-primary" style="margin-top: 2rem;">Book Your Service</a>
+                </div>
+                
+                <div class="about-image fade-in">
+                    🏆
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="contact-content">
+                <div class="contact-info fade-in">
+                    <h2>Get Your Free Estimate Today</h2>
+                    <p style="font-size: 1.2rem; margin-bottom: 2rem;">Ready to transform your landscape? Contact us for a free, no-obligation consultation and quote.</p>
+                    
+                    <div class="contact-item" data-icon="📞">
+                        <div>
+                            <strong>Phone:</strong><br>
+                            (630) XXX-XXXX
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item" data-icon="📧">
+                        <div>
+                            <strong>Email:</strong><br>
+                            info@random.com
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item" data-icon="📍">
+                        <div>
+                            <strong>Service Area:</strong><br>
+                            Lansing, IL & Surrounding Areas
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item" data-icon="🕒">
+                        <div>
+                            <strong>Hours:</strong><br>
+                            Mon-Sat: 7:00 AM - 7:00 PM<br>
+                            Sun: Closed
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form fade-in">
+                    <h3 style="margin-bottom: 1.5rem;">Request Your Free Quote</h3>
+                    <form>
+                        <div class="form-group">
+                            <label for="name">Name *</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone">Phone *</label>
+                            <input type="tel" id="phone" name="phone" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="service">Service Needed</label>
+                            <select id="service" name="service" style="width: 100%; padding: 0.8rem; border: none; border-radius: 10px; background: rgba(255,255,255,0.9); font-size: 1rem;">
+                                <option>Tree Services</option>
+                                <option>Tree Trimming</option>
+                                <option>Stump Grinding</option>
+                                <option>Landscaping</option>
+                                <option>Emergency Service</option>
+                                <option>Other</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Project Details</label>
+                            <textarea id="message" name="message" rows="4" placeholder="Tell us about your project..."></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">Request Free Quote</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Leo's Lawn Care, Inc. | Licensed & Insured | Serving Lansing, IL & Surrounding Areas</p>
+            <div class="social-links">
+                <a href="#" title="Facebook">📘</a>
+                <a href="#" title="Google Reviews">⭐</a>
+                <a href="#" title="LinkedIn">💼</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Header background change on scroll
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('.header');
+            if (window.scrollY > 100) {
+                header.style.background = 'rgba(44, 85, 48, 0.95)';
+                header.style.backdropFilter = 'blur(10px)';
+            } else {
+                header.style.background = 'linear-gradient(135deg, #2c5530 0%, #4a7c59 100%)';
+                header.style.backdropFilter = 'none';
+            }
+        });
+
+        // Interactive Booking Form Logic
+        (function() {
+            // Step navigation
+            const steps = [
+                document.getElementById('step1'),
+                document.getElementById('step2'),
+                document.getElementById('step3'),
+                document.getElementById('step4')
+            ];
+            const indicators = [
+                document.getElementById('step1-indicator'),
+                document.getElementById('step2-indicator'),
+                document.getElementById('step3-indicator'),
+                document.getElementById('step4-indicator')
+            ];
+            const btnNext = document.getElementById('btn-next');
+            const btnBack = document.getElementById('btn-back');
+            let currentStep = 0;
+
+            // Data storage
+            const bookingData = {
+                service: '',
+                serviceLabel: '',
+                cost: '',
+                date: '',
+                time: '',
+                notes: '',
+                name: '',
+                phone: '',
+                email: '',
+                address: '',
+                propertyType: '',
+                priority: ''
+            };
+
+            function showStep(idx) {
+                steps.forEach((step, i) => {
+                    step.classList.toggle('active', i === idx);
+                });
+                indicators.forEach((ind, i) => {
+                    ind.classList.remove('active', 'completed');
+                    if (i < idx) ind.classList.add('completed');
+                    else if (i === idx) ind.classList.add('active');
+                });
+                btnBack.style.display = idx === 0 ? 'none' : '';
+                btnNext.textContent = idx === steps.length - 1 ? 'Confirm Booking' : 'Next →';
+            }
+
+            showStep(currentStep);
+
+            btnNext.addEventListener('click', function() {
+                if (currentStep === 0) {
+                    // Step 1: Service selection
+                    const selected = document.querySelector('.service-option.selected input');
+                    if (!selected) {
+                        alert('Please select a service.');
+                        return;
+                    }
+                    bookingData.service = selected.value;
+                    bookingData.serviceLabel = selected.parentElement.querySelector('h4').textContent;
+                    bookingData.cost = selected.getAttribute('data-price');
+                    currentStep++;
+                    showStep(currentStep);
+                } else if (currentStep === 1) {
+                    // Step 2: Date & time
+                    const date = document.getElementById('booking-date').value;
+                    const timeSlot = document.querySelector('.time-slot.selected');
+                    if (!date) {
+                        alert('Please select a date.');
+                        return;
+                    }
+                    if (!timeSlot) {
+                        alert('Please select a time slot.');
+                        return;
+                    }
+                    bookingData.date = date;
+                    bookingData.time = timeSlot.getAttribute('data-time');
+                    bookingData.notes = document.getElementById('special-requests').value;
+                    currentStep++;
+                    showStep(currentStep);
+                } else if (currentStep === 2) {
+                    // Step 3: Customer info
+                    const name = document.getElementById('customer-name').value.trim();
+                    const phone = document.getElementById('customer-phone').value.trim();
+                    const email = document.getElementById('customer-email').value.trim();
+                    const address = document.getElementById('service-address').value.trim();
+                    if (!name || !phone || !email || !address) {
+                        alert('Please fill in all required fields.');
+                        return;
+                    }
+                    bookingData.name = name;
+                    bookingData.phone = phone;
+                    bookingData.email = email;
+                    bookingData.address = address;
+                    bookingData.propertyType = document.getElementById('property-type').value;
+                    bookingData.priority = document.getElementById('emergency-level').value;
+                    // Fill review
+                    document.getElementById('summary-service').textContent = bookingData.serviceLabel;
+                    document.getElementById('summary-date').textContent = bookingData.date;
+                    document.getElementById('summary-time').textContent = bookingData.time;
+                    document.getElementById('summary-customer').textContent = bookingData.name;
+                    document.getElementById('summary-phone').textContent = bookingData.phone;
+                    document.getElementById('summary-address').textContent = bookingData.address;
+                    document.getElementById('summary-cost').textContent = `$${bookingData.cost}`;
+                    currentStep++;
+                    showStep(currentStep);
+                } else if (currentStep === 3) {
+                    // Step 4: Confirmation
+                    document.getElementById('booking-review').style.display = 'none';
+                    const ref = 'ATS-' + Math.floor(Math.random()*1000000).toString().padStart(6,'0');
+                    document.getElementById('booking-reference').textContent = ref;
+                    document.getElementById('confirmation-success').style.display = '';
+                    btnNext.style.display = 'none';
+                    btnBack.style.display = 'none';
+
+                    // Send booking data to Zapier
+                    const webhookUrl = 'https://hook.us2.make.com/4f9o7o9iaurhwfh6xc4r11la78yribb2';
+                    const payload = Object.assign({}, bookingData, { reference: ref });
+                    fetch(webhookUrl, {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify(payload)
+                    })
+                    .then(response => {
+                        // Optionally handle response
+                    })
+                    .catch(error => {
+                        // Optionally handle error
+                        console.error('Webhook POST error:', error);
+                    });
+                }
+            });
+
+            btnBack.addEventListener('click', function() {
+                if (currentStep > 0) {
+                    currentStep--;
+                    showStep(currentStep);
+                    if (currentStep === 3) {
+                        document.getElementById('booking-review').style.display = '';
+                        document.getElementById('confirmation-success').style.display = 'none';
+                        btnNext.style.display = '';
+                    }
+                }
+            });
+
+            // Service selection UI
+            document.querySelectorAll('.service-option').forEach(option => {
+                option.addEventListener('click', function() {
+                    document.querySelectorAll('.service-option').forEach(opt => opt.classList.remove('selected'));
+                    this.classList.add('selected');
+                    this.querySelector('input').checked = true;
+                });
+            });
+
+            // Time slot selection UI
+            document.querySelectorAll('.time-slot:not(.unavailable)').forEach(slot => {
+                slot.addEventListener('click', function() {
+                    document.querySelectorAll('.time-slot').forEach(s => s.classList.remove('selected'));
+                    this.classList.add('selected');
+                });
+            });
+        })();
+
+        // Contact form submission (free quote)
+        document.querySelector('.contact-form form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your interest! We\'ll contact you within 24 hours with your free quote.');
+        });
+    </script>
+</body>
+</html>
