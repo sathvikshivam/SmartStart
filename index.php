@@ -328,7 +328,7 @@
         <h2 class="title"><span class="emoji">📦</span> Material</h2>
         <div class="grid grid-3">
           <div class="card">
-            <h3>Lesson Handouts</h3>
+            <h3>Packet</h3>
             <ul class="bullets">
               <li>3‑Jar Budget worksheet (Spend/Save/Share)</li>
               <li>Wants vs Needs sorting game</li>
@@ -336,22 +336,13 @@
             </ul>
           </div>
           <div class="card">
-            <h3>Activities</h3>
+            <h3>SLideshow</h3>
             <ul class="bullets">
               <li>Sticker‑chart savings tracker</li>
               <li>Timeline: $5/week for 10 weeks</li>
               <li>Classroom coin‑count challenge</li>
             </ul>
           </div>
-          <div class="card">
-            <h3>Family Guides</h3>
-            <ul class="bullets">
-              <li>Talking about money at home</li>
-              <li>Setting simple savings matches</li>
-              <li>Comparing colleges by net cost</li>
-            </ul>
-          </div>
-        </div>
         <details class="accordion"><summary>Print All</summary>
           <p>Use the <strong>🖨️ Print</strong> button in the top‑right to print this page cleanly.</p>
         </details>
