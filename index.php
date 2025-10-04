@@ -99,14 +99,14 @@
     <section>
       <h2 class="title">🧑‍🤝‍🧑 Founders</h2>
       <div class="card">
-        <p>Meet the team behind <strong><?php echo htmlspecialchars($site_title); ?></strong>. We are parents, educators, and finance coaches.</p>
+        <p>Meet the team behind <strong><?php echo htmlspecialchars($site_title); ?></strong>. Sahil Mehta, Sathvik Shivam, and Ved Meduri.</p>
       </div>
     </section>
   <?php elseif($tab==='material'): ?>
     <section>
       <h2 class="title">📦 Material</h2>
       <div class="card">
-        <p>Access worksheets, activities, and family guides.</p>
+        <p>Access worksheets, activities, and other resources.</p>
       </div>
     </section>
   <?php elseif($tab==='goal'): ?>
