@@ -450,7 +450,6 @@
   </script>
 </body>
 </html>
-<<<<<<< HEAD
 <?php
   // Basic site settings
   $site_title = "Money Smarts for Kids";
@@ -903,5 +902,3 @@
   </script>
 </body>
 </html>
-=======
->>>>>>> 4ecab70 (	new file:   index.php)
