@@ -1,6 +1,6 @@
 <?php
   // Basic site settings
-  $site_title = "Money Smarts for Kids";
+  $site_title = "Smart Start";
   $tagline = "A kid-friendly course about money";
   $year = date('Y');
 
@@ -118,9 +118,5 @@
     </section>
   <?php endif; ?>
   </main>
-
-  <footer>
-    <p>© <?php echo $year; ?> • <?php echo htmlspecialchars($site_title); ?> • Made with ❤️</p>
-  </footer>
 </body>
 </html>
