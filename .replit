@@ -1,2 +1,18 @@
+run = "php -S 0.0.0.0:8000 -t ."
+
+entrypoint = "index.php"
+modules = ["php-8.2"]
+
 [nix]
-channel = "stable-25_05"
+channel = "stable-22_11"
+
+[deployment]
+run = ["php", "-S", "0.0.0.0:8000", "-t", "."]
+deploymentTarget = "cloudrun"
+
+[[ports]]
+localPort = 8000
+externalPort = 80
+
+[agent]
+expertMode = true
